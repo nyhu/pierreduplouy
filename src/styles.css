@@ -2,5 +2,6 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: #0d0c11;
-    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    font-family: "Courier New", Courier, monospace;
+    color: rgb(202, 196, 187);
 }

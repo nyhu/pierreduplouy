@@ -6,5 +6,18 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  public title = 'Pierre du Plouy';
+  public navbarName = 'topnav';
+
+  constructor () {
+  }
+
+  public expandNavbar() {
+    if (this.navbarName === 'topnav') {
+      this.navbarName += ' responsive';
+    } else {
+      this.navbarName = 'topnav';
+    }
+    console.log('ok');
+  }
 }
