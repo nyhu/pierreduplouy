@@ -8,20 +8,28 @@ import { DOCUMENT } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
   public imageSources: string[] = [
+    '001.JPG',
+    '012.JPG',
     'IMG_0274.JPG',
+    'IMG_0537.JPG',
     'IMG_2709.JPG',
     'IMG_4317.JPG',
-    'IMG_5549.JPG',
-    'IMG_5674.JPG',
+    'IMG_4345.JPG',
     'IMG_5509.JPG',
-    'IMG_5726.JPG',
-    'IMG_8985.JPG',
+    'IMG_5676.JPG',
+    'IMG_5679.JPG',
+    'IMG_6293.JPG',
+    'IMG_9118.JPG',
+    'IMG_9207.JPG',
+    'IMG_9209.JPG',
+    'IMG_9750.jpeg',
+    'IMG_9828.jpeg'
   ];
   public currentElement: Number = 1;
 
   constructor(@Inject(DOCUMENT) private Document: Document) {
     for (let i = 0; i < this.imageSources.length; i++) {
-      this.imageSources[i] = '/assets/photo-gallery/' + this.imageSources[i];
+      this.imageSources[i] = '/assets/photo-gallery/Home/' + this.imageSources[i];
     }
   }
 
