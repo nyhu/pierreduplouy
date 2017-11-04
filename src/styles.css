@@ -2,8 +2,12 @@ body {
     padding: 0px;
     margin: 0px;
     background-color: #0d0c11;
-    font-family: "Courier New", Courier, monospace;
+    font-family: 'Indie Flower', cursive;
     color: rgb(202, 196, 187);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    text-align: center;
 }
 
 select {
@@ -12,4 +16,10 @@ select {
     border-radius: 4px;
     background-color: black;
     color: #888484
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
 }

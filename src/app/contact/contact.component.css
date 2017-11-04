@@ -1,0 +1,19 @@
+h2 {
+     margin-top: 50px;
+}
+
+.fa {
+    margin: 15px;
+    border: 1px solid rgb(202, 196, 187);
+    border-radius: 50%;
+}
+
+.fa-facebook {
+    color: rgb(202, 196, 187);
+    opacity: 0.8;
+    height: 40px;
+    width: 40px;
+    font-size: 40px;
+    padding: 10px;
+    text-align: center;  
+}
