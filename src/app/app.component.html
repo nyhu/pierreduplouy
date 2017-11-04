@@ -1,10 +1,22 @@
 <div [class]="navbarName">
-  <a href="#home"><img id="logo" src="/assets/Logo.svg"/></a>
-  <a href="#home">Home</a>
-  <a href="#news">News</a>
-  <a href="#contact">Contact</a>
-  <a href="#about">About</a>
-  <a class="icon" (click)="expandNavbar()">&#9776;</a>
+  <a class="logo" href="/home"><img src="/assets/Logo.svg"/></a>
+  <div class="topnav-content">
+    <a href="/home">Accueil</a>
+    <a class="dropdown">
+      <span class="dropdown-btn">Portfolio<select></select></span>
+      <div class="dropdown-content">
+        <a href="/portfolio/PeintureAbstraite">Peinture</a>
+        <a href="/portfolio/Nues">Nus</a>
+        <a href="/portfolio/RefletDO">Reflets</a>
+        <a href="/portfolio/Spirit">Spirit</a>
+        <a href="/portfolio/Chevaux">Chevaux</a>
+        <a href="/portfolio/Vegetal">Vegetal</a>
+        <a href="/portfolio/Ciel">Ciel</a>
+      </div>
+    </a>
+    <a href="/contact">Contact</a>
+    <a class="icon" (click)="expandNavbar()">&#9776;</a>
+  </div>
 </div>
 
 <router-outlet></router-outlet>

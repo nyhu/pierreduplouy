@@ -7,12 +7,24 @@ import 'hammerjs';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { ContactComponent } from './contact/contact.component';
 
 const appRoutes: Routes = [
- {
+  {
     path: 'home',
     component: HomeComponent,
-    data: { title: 'Heroes List' }
+    data: { title: 'Home' }
+  },
+  {
+    path: 'portfolio',
+    component: PortfolioComponent,
+    data: { title: 'Portfolio' }
+  },
+  {
+    path: 'portfolio/:galleryName',
+    component: PortfolioComponent,
+    data: { title: 'Gallery' }
   },
   {
     path: '',
@@ -20,9 +32,14 @@ const appRoutes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '**',
-    redirectTo: '/home',
-  }
+    path: 'contact',
+    component: ContactComponent,
+    data: { title: 'contact' }
+  },
+   // {
+  //   path: '**',
+  //   redirectTo: '/home',
+  // }
 ];
 
 @NgModule({
@@ -30,6 +47,8 @@ const appRoutes: Routes = [
     AppComponent,
     HomeComponent,
     GalleryComponent,
+    PortfolioComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

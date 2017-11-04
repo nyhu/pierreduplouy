@@ -1,31 +1,43 @@
 
 /* Add a black background color to the top navigation */
+.logo {
+  height: 50px;
+  width: auto;
+  opacity: 0.8;
+}
+
 .topnav {
     background-color: #000;
-    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
     position: fixed;
     z-index: 500;
     background-color: #000;
-    width: 100%;
-    vertical-align: baseline; 
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
+    width: 100%
 }
-
+  
+.topnav-content {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: row;
+    justify-content: flex-end;  
+    right: 0px;
+}
 /* Style the links inside the navigation bar */
 .topnav a {
     color: rgb(202, 196, 187);
+    vertical-align: center;
     text-align: right;
     padding: 30px;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 23px;
     border: 1px rgb(202, 196, 187)
 }
 
 /* Change the color of links on hover */
 .topnav a:hover {
-    color: rgb(202, 196, 187);
+    color: rgb(240, 237, 234);
 }
 
 /* Hide the link that should open and close the topnav on small screens */
@@ -33,19 +45,62 @@
     display: none;
 }
 
-/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
-  .topnav {
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+    border: 1px solid rgb(56, 56, 56);
+    display: none;
+    position: absolute;
+    text-align: left;
+    top:90px;
+    width: 100%;
+    background-color: black;
+}
+
+.dropdown-content a {
+  text-align: left;
+  font-size: 18px;
+}
+
+.dropdown:hover .dropdown-content {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: start;
+}
 
+.dropdown:checked .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+.topnav {
+    display: flex;
+    justify-content: space-around;
   }
-  .topnav a {display: none;}
-  .topnav a:last-child {display: block;}
-  .topnav a.icon {
-    float: right;
+
+.topnav-content {
+    flex-direction: column;
+  }
+
+.topnav a {
+    display: none;
+  }
+
+.topnav a.logo {
     display: block;
+  }
+  
+  .topnav a.icon {
+    display: block;
+    position: absolute;
+    margin: 15px;
+    top: 0px;
+    right: 0px;
   }
 }
 
@@ -54,12 +109,13 @@
   .topnav.responsive {
       position: fixed;
       font-size: 15px;
-    }
-  .topnav.responsive a.icon {
-    position: absolute;
-    right: 0;
-    top: 0;
+      display: block;
   }
+
+  .topnav.responsive .topnav-content {
+    display: block;
+  }
+
   .topnav.responsive a {
     float: none;
     display: block;

@@ -5,3 +5,11 @@ body {
     font-family: "Courier New", Courier, monospace;
     color: rgb(202, 196, 187);
 }
+
+select {
+    padding: 5px 5px;
+    border: none;
+    border-radius: 4px;
+    background-color: black;
+    color: #888484
+}
