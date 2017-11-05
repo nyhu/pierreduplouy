@@ -30,7 +30,7 @@
   color: rgb(202, 196, 187);
   vertical-align: center;
   text-align: right;
-  padding: 30px;
+  padding: 20px;
   text-decoration: none;
   font-size: 20px;
   border: 1px rgb(202, 196, 187)
@@ -51,11 +51,10 @@
 }
 
 .dropdown-content {
-    border: 1px solid rgb(56, 56, 56);
     display: none;
+    margin-top: 10px; 
     position: absolute;
     text-align: left;
-    top:90px;
     width: 100%;
     background-color: black;
 }
@@ -63,6 +62,8 @@
 .dropdown-content a {
   text-align: left;
   font-size: 18px;
+  margin: 5px;
+  padding: 0px;
 }
 
 .dropdown:hover .dropdown-content {
@@ -78,7 +79,7 @@
 }
 
 /* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 .topnav {
     display: flex;
     justify-content: space-around;
@@ -106,7 +107,7 @@
 }
 
 /* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
   .topnav.responsive {
       position: fixed;
       font-size: 15px;
@@ -121,5 +122,8 @@
     float: none;
     display: block;
     text-align: left;
+  }
+  .dropdown-content {
+      position: relative;
   }
 }

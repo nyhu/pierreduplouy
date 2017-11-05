@@ -22,7 +22,6 @@ export class GalleryComponent implements OnInit {
   }
 
   public getThumbOpacity(currentElement, currentThumb) {
-    console.log('currentElement = ', currentElement, 'curentThumb = ', currentThumb);
     currentElement = (currentElement + 960) / 900;
     if (currentElement + 0.5 >= currentThumb && currentElement - 0.5 <= currentThumb) {
       return 1;
