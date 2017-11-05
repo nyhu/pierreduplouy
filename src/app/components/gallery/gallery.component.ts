@@ -22,13 +22,14 @@ export class GalleryComponent implements OnInit {
   }
 
   public getThumbOpacity(currentElement, currentThumb) {
-    currentElement = (currentElement + 900) / 900;
-    if (currentElement === currentThumb) {
+    console.log('currentElement = ', currentElement, 'curentThumb = ', currentThumb);
+    currentElement = (currentElement + 960) / 900;
+    if (currentElement + 0.5 >= currentThumb && currentElement - 0.5 <= currentThumb) {
       return 1;
     } else if (currentElement < currentThumb) {
-      return 1 / (1.4 * (currentThumb / currentElement));
+      return 0.7 / ((currentThumb - currentElement) * (currentThumb - currentElement));
     }
-    return 1 / (1.4 * (currentElement / currentThumb));
+    return 0.7 / ((currentElement - currentThumb) * (currentElement - currentThumb));
   }
 
   @HostListener('window:scroll', [])

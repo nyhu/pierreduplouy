@@ -2,6 +2,7 @@
     position: relative;
     display: inline-block;
     width: 80%;
+    top: -50px;
 }
 
 .thumbs-gallery {
@@ -14,12 +15,12 @@
 
 .img-std {
     /* Height must be fixed or change in html */
-    max-height: 700px;
+    height: 700px;
     width: auto;
     max-width: 100%;
     transition: all 0.3s ease-out;
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 80px;
+    padding-bottom: 120px;
     display: block;
     margin: auto;
 }
@@ -36,6 +37,8 @@ li {
     transition: all 0.3s ease-out;
     display: block;
     margin: auto;    
+    margin-top: 5px;
+    margin-bottom: 5px;
     border: 1px solid #747272; 
 }
 

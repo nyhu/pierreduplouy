@@ -46,3 +46,4 @@ src/assets/photo-gallery/*
 assets/Favicon.svg
 assets/Logo.svg
 
+dist/**/*

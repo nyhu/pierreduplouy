@@ -1,38 +1,39 @@
 
 /* Add a black background color to the top navigation */
 .logo {
-  height: 50px;
-  width: auto;
-  opacity: 0.8;
+  width: 120px;
+  height: auto;
+  opacity: 0.9;
 }
 
 .topnav {
-    background-color: #000;
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    position: fixed;
-    z-index: 500;
-    background-color: #000;
-    width: 100%
+  top: 0px;
+  background-color: #000;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: fixed;
+  z-index: 500;
+  background-color: #000;
+  width: 100%;
 }
   
 .topnav-content {
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: row;
-    justify-content: flex-end;  
-    right: 0px;
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: row;
+  justify-content: flex-end;  
+  right: 0px;
 }
 /* Style the links inside the navigation bar */
 .topnav a {
-    color: rgb(202, 196, 187);
-    vertical-align: center;
-    text-align: right;
-    padding: 30px;
-    text-decoration: none;
-    font-size: 23px;
-    border: 1px rgb(202, 196, 187)
+  color: rgb(202, 196, 187);
+  vertical-align: center;
+  text-align: right;
+  padding: 30px;
+  text-decoration: none;
+  font-size: 20px;
+  border: 1px rgb(202, 196, 187)
 }
 
 /* Change the color of links on hover */
