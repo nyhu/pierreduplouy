@@ -43,7 +43,6 @@ export class PortfolioComponent implements OnInit, OnDestroy {
     '003.JPG',
     '004.JPG',
     'IMG_5509.JPG',
-    'IMG_5673.JPG',
     'IMG_5737.JPG',
     'IMG_8535.JPG',
     'IMG_8538.JPG',
