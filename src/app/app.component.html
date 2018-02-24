@@ -1,12 +1,20 @@
 <div [class]="navbarName">
   <a class="logo" href="/home"><img class="logo" src="/assets/Logo.svg"/></a>
   <div class="topnav-content">
+
     <a href="/home">Accueil</a>
+
     <a class="dropdown">
-      <span class="dropdown-btn">Portfolio<select></select></span>
+      <span class="dropdown-btn">Peinture<select></select></span>
       <div class="dropdown-content">
         <a href="/portfolio/PeintureAbstraite">Peinture</a>
         <a href="/portfolio/Nues">Nus</a>
+      </div>
+    </a>
+
+    <a class="dropdown">
+      <span class="dropdown-btn">Photographie<select></select></span>
+      <div class="dropdown-content">
         <a href="/portfolio/RefletDO">Reflets</a>
         <a href="/portfolio/Spirit">Spirit</a>
         <a href="/portfolio/Chevaux">Chevaux</a>
@@ -14,8 +22,9 @@
         <a href="/portfolio/Ciel">Ciel</a>
       </div>
     </a>
+
     <a href="/contact">Contact</a>
-    <a href="/private-space">Privé</a>
+
     <a class="icon" (click)="expandNavbar()">&#9776;</a>
   </div>
 </div>

@@ -10,7 +10,6 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
-import { PrivateComponent } from './private/private.component';
 
 const appRoutes: Routes = [
   {
@@ -27,11 +26,6 @@ const appRoutes: Routes = [
     path: 'portfolio/:galleryName',
     component: PortfolioComponent,
     data: { title: 'Gallery' }
-  },
-  {
-    path: 'private-space',
-    component: PrivateComponent,
-    data: { title: 'Private' }
   },
   {
     path: '',
@@ -57,7 +51,6 @@ const appRoutes: Routes = [
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
-    PrivateComponent,
   ],
   imports: [
     BrowserModule,
