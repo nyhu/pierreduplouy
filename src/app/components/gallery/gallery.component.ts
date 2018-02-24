@@ -10,7 +10,7 @@ export class GalleryComponent implements OnInit {
   @Input() public imageSources: string[];
   @Input() public pathToImages: string;
   @Input() public route: string;
-  public currentElement: Number = 1;
+  public currentElement: number = 1;
 
   constructor( @Inject(DOCUMENT) private Document: Document) {
   }
