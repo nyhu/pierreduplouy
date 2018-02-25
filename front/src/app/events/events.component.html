@@ -1,16 +1,16 @@
 <div class="event" *ngFor="let event of events">
-  <hr>
-  <div class="date">
-    <h1>{{event.date}}</h1>
-  </div>
   <div class="corpus">
+    <hr>
     <h3>{{event.title}}</h3>
     <div *ngIf="event.organizer">
       <p>Organisé par {{event.organizer}}</p>
     </div>
     <div *ngIf="event.participants">
-      <p>Avec {{event.participants}}</p>
+      <p>Avec la participation de {{event.participants}}</p>
     </div>
     <p>{{event.localisation}}</p>
+  </div>
+  <div class="date">
+    <h1>{{event.date}}</h1>
   </div>
 </div>
