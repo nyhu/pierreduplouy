@@ -1,7 +1,7 @@
 <div class="img-gallery">
   <div *ngFor="let image of imageSources; let i = index">
     <article class="box-cell" id="no{{ i + 1}}">
-      <a href="{{ route }}#no{{ i + 1 }}">
+      <a scrollTo href="{{ route }}#no{{ i + 1 }}">
         <img class="img-std" [src]=image title="{{ getHumanPath() }} n° {{ i + 1 }}">
       </a>
     </article>
@@ -11,7 +11,7 @@
   <ul>
     <div *ngFor="let image of imageSources; let i = index">
       <li class="thumb">
-        <a href="{{ route }}#no{{ i + 1}}">
+        <a scrollTo href="{{ route }}#no{{ i + 1}}">
           <img class="img-thumb" [style.opacity]="getThumbOpacity(currentElement, i + 1)" [src]=image>
         </a>
       </li>

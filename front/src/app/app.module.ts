@@ -2,6 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import {ScrollToModule} from 'ng2-scroll-to';
+
 import 'hammerjs';
 
 import { AppComponent } from './app.component';
@@ -72,6 +74,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
+    ScrollToModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]
