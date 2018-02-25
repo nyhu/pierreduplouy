@@ -48,7 +48,7 @@ li {
     border: 1px solid #747272; 
 }
 
-@media (max-width: 700px) {
+@media (max-width: 850px) {
     .thumb-gallery {
         visibility: hidden;
         width: 0%;

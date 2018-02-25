@@ -20,7 +20,7 @@ hr {
     width: 60%;
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 850px) {
     h1 {
         font-size: 1em
     }
