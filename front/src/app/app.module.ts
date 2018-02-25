@@ -10,12 +10,14 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
+import { BiographieComponent } from './biographie/biographie.component';
+import { EventsComponent } from './events/events.component';
 
 const appRoutes: Routes = [
   {
-    path: 'home',
+    path: 'accueil',
     component: HomeComponent,
-    data: { title: 'Home' }
+    data: { title: 'Accueil' }
   },
   {
     path: 'portfolio',
@@ -28,8 +30,18 @@ const appRoutes: Routes = [
     data: { title: 'Gallery' }
   },
   {
+    path: 'biographie',
+    component: BiographieComponent,
+    data: { title: 'Biographie' }
+  },
+  {
+    path: 'evenements',
+    component: EventsComponent,
+    data: { title: 'Evénements' }
+  },
+  {
     path: '',
-    redirectTo: '/home',
+    redirectTo: '/accueil',
     pathMatch: 'full'
   },
   {
@@ -51,6 +63,8 @@ const appRoutes: Routes = [
     PortfolioComponent,
     ContactComponent,
     FooterComponent,
+    BiographieComponent,
+    EventsComponent,
   ],
   imports: [
     BrowserModule,

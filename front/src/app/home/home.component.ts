@@ -7,7 +7,7 @@ import { DOCUMENT } from '@angular/platform-browser';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public route = '/home';
+  public route = '/accueil';
   public pathToImages = '/assets/photo-gallery/Home/';
   public imageSources: string[] = [
     '001.JPG',

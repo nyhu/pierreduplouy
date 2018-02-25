@@ -1,0 +1,20 @@
+h3 {
+    text-align: left;
+}
+
+hr {
+    opacity: 0.2;
+}
+.event {
+    margin: 5%;
+}
+
+.date {
+    float: left;
+    width: 20%;
+}
+
+.corpus {
+    float: left;
+    width: 80%;
+}
