@@ -19,10 +19,16 @@
     width: auto;
     max-width: 100%;
     transition: all 0.3s ease-out;
-    padding-top: 80px;
+    padding-top: 90px;
     padding-bottom: 120px;
     display: block;
     margin: auto;
+}
+
+.img-std:hover {
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    transform: scale(1.02);
 }
 
 li {
