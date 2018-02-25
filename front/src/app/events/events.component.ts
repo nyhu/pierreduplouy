@@ -165,7 +165,7 @@ export class EventsComponent implements OnInit {
       date: "Septembre 2017",
     },
     {
-      title: "Exposition de Photographie et de Peinture - Douce Quiétude",
+      title: "Exposition de Photographie et de Peinture",
       localisation: "27520 Bourgtheroulde",
       participants: "Corinne Liani",
       date: "Octobre 2017",
