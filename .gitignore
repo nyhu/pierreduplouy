@@ -3,6 +3,7 @@
 # compiled output
 pierreduplouy.front/
 /tmp
+front/dist
 
 # dependencies
 front/node_modules
@@ -18,5 +19,3 @@ front/e2e/*.map
 front/src/assets/photo-gallery/*
 front/src/assets/Favicon.svg
 front/src/assets/Logo.svg
-
-build_*.sh

@@ -1,0 +1,24 @@
+version: "2"
+
+services:
+
+  pierreduplouy-front:
+    restart: always
+    image: pierreduplouy-front
+    build: ./front
+    container_name: pierreduplouy-front
+    networks:
+      - default
+    volumes:
+      - "./conf.d:/etc/nginx/conf.d"
+    environment:
+      - VIRTUAL_HOST=pierreduplouy.fr, www.pierreduplouy.fr
+      - VIRTUAL_NETWORK=nginx-proxy
+      - VIRTUAL_PORT=80
+      - LETSENCRYPT_HOST=pierreduplouy.fr, www.pierreduplouy.fr
+      - LETSENCRYPT_EMAIL=to-uss@noos.fr
+ 
+networks:
+  default:
+    external:
+      name: spatioport_orbit
