@@ -14,6 +14,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { ContactComponent } from './contact/contact.component';
 import { BiographieComponent } from './biographie/biographie.component';
 import { EventsComponent } from './events/events.component';
+import { PresseComponent } from './presse/presse.component';
 
 const appRoutes: Routes = [
   {
@@ -42,6 +43,11 @@ const appRoutes: Routes = [
     data: { title: 'Evénements' }
   },
   {
+    path: 'presse',
+    component: PresseComponent,
+    data: { title: 'La Presse en Parle' }
+  },
+  {
     path: '',
     redirectTo: '/accueil',
     pathMatch: 'full'
@@ -67,6 +73,7 @@ const appRoutes: Routes = [
     FooterComponent,
     BiographieComponent,
     EventsComponent,
+    PresseComponent,
   ],
   imports: [
     BrowserModule,

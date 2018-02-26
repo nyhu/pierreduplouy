@@ -1,0 +1,20 @@
+.img-wide {
+    width: 55%;
+    height: auto;
+    padding-left: 22.5%;
+    padding-right: 22.5%;
+}
+
+.title {
+    float: right;
+    padding-left: 10%;
+    padding-right: 15%;
+}
+
+@media (max-width: 850px) {
+    .img-wide {
+        width: 100%;
+        padding-left: 0%;
+        padding-right: 0%;
+    }
+}
