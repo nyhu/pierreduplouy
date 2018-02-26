@@ -176,4 +176,8 @@ export class EventsComponent implements OnInit {
 
   ngOnInit() {
   }
+
+  public getEventsList() {
+    return this.events.reverse();
+  }
 }
