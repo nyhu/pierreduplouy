@@ -27,7 +27,7 @@
 
 .img-std:hover {
     transition-timing-function: ease;
-    transition-duration: 1s;
+    transition-duration: 3s;
     transform: scale(1.02);
 }
 
