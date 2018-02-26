@@ -57,10 +57,10 @@ const appRoutes: Routes = [
     component: ContactComponent,
     data: { title: 'contact' }
   },
-   // {
-  //   path: '**',
-  //   redirectTo: '/home',
-  // }
+  {
+    path: '**',
+    redirectTo: '/accueil'
+  },
 ];
 
 @NgModule({
