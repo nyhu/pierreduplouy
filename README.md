@@ -16,9 +16,9 @@ Result is available on [Pierre du Plouy's website](https://pierreduplouy.fr/)
 
 ## Usage
 
-Run the project with ./run.sh
+Run the project with ./run.sh.
 You can use a [spaceport](https://github.com/nyhu/spatioport) to deploy it with given Docker config.
 
-Never forget to feed the cat : [![gitcheese.com](https://s3.amazonaws.com/gitcheese-ui-master/images/badge.svg)](https://www.gitcheese.com/donate/users/16725825/repos/109175629) to make it works!
+Never forget to feed the cat [![gitcheese.com](https://s3.amazonaws.com/gitcheese-ui-master/images/badge.svg)](https://www.gitcheese.com/donate/users/16725825/repos/109175629) to make it works!
 
 #### And contact me if you wanna reuse this project.
