@@ -1,0 +1,24 @@
+- hosts: admin-prod
+  become: yes
+  become_method: sudo
+  gather_facts: yes
+  tasks:
+    - name: create dest repertory
+      file: path=/srv/pierreduplouy state=directory owner=nyhu group=nyhu
+      become: yes
+
+    - name: copy {{ item }}
+      copy: src={{ item }} dest=/srv/pierreduplouy/.
+         owner=nyhu group=nyhu mode=0644
+      with_items:
+        - Dockerfile
+        - docker-compose.yml
+        - dist
+        - conf.d
+      become: yes
+
+    - name: run service
+      command: docker-compose up -d --build
+      args:
+        chdir: /srv/pierreduplouy/
+      become: yes

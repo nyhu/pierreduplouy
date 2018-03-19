@@ -1,24 +1,31 @@
-version: "2"
+version: "3"
 
 services:
 
   pierreduplouy-front:
+    container_name: pierreduplouy
     restart: always
-    image: pierreduplouy-front
-    build: ./front
-    container_name: pierreduplouy-front
+    image: pierreduplouy
+    build: .
     networks:
-      - default
+      - traefik
     volumes:
       - "./conf.d:/etc/nginx/conf.d"
     environment:
-      - VIRTUAL_HOST=pierreduplouy.fr, www.pierreduplouy.fr
-      - VIRTUAL_NETWORK=nginx-proxy
-      - VIRTUAL_PORT=80
-      - LETSENCRYPT_HOST=pierreduplouy.fr, www.pierreduplouy.fr
-      - LETSENCRYPT_EMAIL=to-uss@noos.fr
+      - "traefik.frontend.rule=Host:pierreduplouy.fr, www.pierreduplouy.fr"
+      - "traefik.port=80"
+      - "traefik.backend=pierreduplouy"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.docker.network=traefik"
+      - "traefik.default.protocol=http"
+
+      # - VIRTUAL_HOST=pierreduplouy.fr, www.pierreduplouy.fr
+      # - VIRTUAL_NETWORK=nginx-proxy
+      # - VIRTUAL_PORT=80
+      # - LETSENCRYPT_HOST=pierreduplouy.fr, www.pierreduplouy.fr
+      # - LETSENCRYPT_EMAIL=to-uss@noos.fr
  
 networks:
-  default:
+  traefik:
     external:
-      name: spatioport_orbit
+      name: traefik_traefik
