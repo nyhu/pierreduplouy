@@ -3,7 +3,7 @@
 # compiled output
 pierreduplouy.front/
 /tmp
-front/dist
+dist
 
 # dependencies
 front/node_modules
