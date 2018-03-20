@@ -2,9 +2,7 @@
 
 set -e
 
-rm -rf dist
-cd front
-ng build --prod -op ../dist
+npm --prefix ./front/ i
+npm --prefix ./front/ run build
 
-cd ..
 ansible-playbook playbook.yml -K

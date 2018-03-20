@@ -9,22 +9,14 @@ services:
     build: .
     networks:
       - traefik
-    volumes:
-      - "./conf.d:/etc/nginx/conf.d"
-    environment:
+    labels:
       - "traefik.frontend.rule=Host:pierreduplouy.fr, www.pierreduplouy.fr"
       - "traefik.port=80"
       - "traefik.backend=pierreduplouy"
       - "traefik.frontend.entryPoints=http,https"
-      - "traefik.docker.network=traefik"
+      - "traefik.docker.network=traefik_traefik"
       - "traefik.default.protocol=http"
 
-      # - VIRTUAL_HOST=pierreduplouy.fr, www.pierreduplouy.fr
-      # - VIRTUAL_NETWORK=nginx-proxy
-      # - VIRTUAL_PORT=80
-      # - LETSENCRYPT_HOST=pierreduplouy.fr, www.pierreduplouy.fr
-      # - LETSENCRYPT_EMAIL=to-uss@noos.fr
- 
 networks:
   traefik:
     external:
