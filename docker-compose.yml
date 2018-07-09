@@ -17,6 +17,41 @@ services:
       - "traefik.docker.network=traefik_traefik"
       - "traefik.default.protocol=http"
 
+  pierreduplouy-back:
+    container_name: pierreduplouy_back
+    restart: always
+    image: pierreduplouy_back
+    build: ./back
+    volumes:
+      - ./private:/private
+    networks:
+      - traefik
+    labels:
+      - "traefik.frontend.rule=Host:api.pierreduplouy.fr"
+      - "traefik.port=5000"
+      - "traefik.backend=pierreduplouy_back"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.docker.network=traefik_traefik"
+      - "traefik.default.protocol=http"
+
+  pierreduplouy-nginx:
+    container_name: pierreduplouy_nginx
+    restart: always
+    image: nginx:latest
+    volumes:
+      - ./private:/private/private
+      - ./nginx/private.conf:/etc/nginx/conf.d/default.conf:ro
+    networks:
+      - traefik
+    labels:
+      - "traefik.frontend.rule=Host:cdn.pierreduplouy.fr"
+      - "traefik.port=5001"
+      - "traefik.backend=pierreduplouy_nginx"
+      - "traefik.frontend.entryPoints=http,https"
+      - "traefik.docker.network=traefik_traefik"
+      - "traefik.default.protocol=http"
+
+
 networks:
   traefik:
     external:

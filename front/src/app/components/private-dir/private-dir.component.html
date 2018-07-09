@@ -1,0 +1,12 @@
+<p [style.margin-left]="(deep * 20) + 'px'">
+  {{dir.Name}}
+  <button *ngIf="dir.FileList" (click)="openDir()" >{{ open ? 'Fermer' : 'Ouvrir'}} le repertoire</button>
+</p>
+
+<div *ngFor="let d of dir.directoryList">
+  <app-private-dir [dir]="d" [deep]="deep + 1"></app-private-dir>
+</div>
+<div *ngIf="open" style="margin-top: 100px">
+  <app-gallery *ngIf="dir.FileList" [imageSources]="dir.FileList" [pathToImages]="pathToImg" [route]="route" [displayName]="true" [displayThumbnails]="false"></app-gallery>
+</div>
+<button *ngIf="open" (click)="openDir()" >{{ open ? 'Fermer' : 'Ouvrir'}} le repertoire</button>

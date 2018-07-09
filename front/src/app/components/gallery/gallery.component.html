@@ -1,20 +1,23 @@
-<div class="img-gallery">
-  <div *ngFor="let image of imageSources; let i = index">
-    <article class="box-cell" id="no{{ i + 1}}">
-      <a scrollTo href="{{ route }}#no{{ i + 1 }}">
-        <img class="img-std" [src]=image title="{{ getHumanPath() }} n° {{ i + 1 }}">
-      </a>
-    </article>
-  </div>
-</div>
-<div class="thumbs-gallery" [style.top]="500-(currentElement/320)*40+'px'">
-  <ul>
+<div style="position: relative">
+  <div class="img-gallery">
     <div *ngFor="let image of imageSources; let i = index">
-      <li class="thumb">
-        <a scrollTo href="{{ route }}#no{{ i + 1}}">
-          <img class="img-thumb" [style.opacity]="getThumbOpacity(currentElement, i + 1)" [src]=image>
+      <article class="box-cell" id="no{{ i + 1}}">
+        <p *ngIf="displayName" class="imgName">{{ image }}</p>
+        <a scrollTo href="{{ route }}#no{{ i + 1 }}">
+          <img class="img-std" [src]="pathToImages + image" title="{{ getHumanPath() }} n° {{ i + 1 }}">
         </a>
-      </li>
+      </article>
     </div>
-  </ul>
+  </div>
+  <div *ngIf="displayThumbnails" class="thumbs-gallery" [style.top]="500-(currentElement/320)*40+'px'">
+    <ul>
+      <div *ngFor="let image of imageSources; let i = index">
+        <li class="thumb">
+          <a scrollTo href="{{ route }}#no{{ i + 1}}">
+            <img class="img-thumb" [style.opacity]="getThumbOpacity(currentElement, i + 1)" [src]="pathToImages + image">
+          </a>
+        </li>
+      </div>
+    </ul>
+  </div>
 </div>

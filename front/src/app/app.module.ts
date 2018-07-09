@@ -6,11 +6,14 @@ import {ScrollToModule} from 'ng2-scroll-to';
 
 import 'hammerjs';
 
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { PrivateDirComponent } from './components/private-dir/private-dir.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PrivateComponent } from './private-space/private.component';
 import { ContactComponent } from './contact/contact.component';
 import { BiographieComponent } from './biographie/biographie.component';
 import { EventsComponent } from './events/events.component';
@@ -58,8 +61,17 @@ const appRoutes: Routes = [
     data: { title: 'contact' }
   },
   {
+    path: 'private-space',
+    component: PrivateComponent,
+    data: { title: 'Private-Space' }
+  },
+  {
+    path: 'private-space/dansebourgtheroulde',
+    redirectTo: 'private-space'
+  },
+  {
     path: '**',
-    redirectTo: '/accueil'
+    redirectTo: 'accueil'
   },
 ];
 
@@ -69,13 +81,16 @@ const appRoutes: Routes = [
     HomeComponent,
     GalleryComponent,
     PortfolioComponent,
+    PrivateComponent,
     ContactComponent,
     FooterComponent,
     BiographieComponent,
     EventsComponent,
     PresseComponent,
+    PrivateDirComponent,
   ],
   imports: [
+    HttpModule,
     BrowserModule,
     RouterModule.forRoot(
       appRoutes,

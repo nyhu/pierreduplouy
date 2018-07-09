@@ -10,15 +10,14 @@ export class GalleryComponent implements OnInit {
   @Input() public imageSources: string[];
   @Input() public pathToImages: string;
   @Input() public route: string;
+  @Input() public displayName: boolean = false;
+  @Input() public displayThumbnails: boolean = true;
   public currentElement: number = 1;
 
   constructor( @Inject(DOCUMENT) private Document: Document) {
   }
 
   ngOnInit() {
-    for (let i = 0; i < this.imageSources.length; i++) {
-      this.imageSources[i] = this.pathToImages + this.imageSources[i];
-    }
   }
 
   public getThumbOpacity(currentElement, currentThumb) {

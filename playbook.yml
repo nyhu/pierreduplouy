@@ -1,7 +1,4 @@
-- hosts: admin-prod
-  become: yes
-  become_method: sudo
-  gather_facts: yes
+- hosts: prod
   tasks:
     - name: create dest repertory
       file: path=/srv/pierreduplouy state=directory owner=nyhu group=nyhu
@@ -15,6 +12,8 @@
         - docker-compose.yml
         - front/dist
         - nginx
+        - back
+        - private
       become: yes
 
     - name: run service

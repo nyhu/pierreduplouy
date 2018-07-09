@@ -1,0 +1,35 @@
+<form *ngIf="!open" class="form">
+  <div class="form-group">
+    <label >Login</label>
+    <input #login type="text" class="form-control"  required>
+  </div>
+  <div class="form-group">
+    <label >Password</label>
+    <input #password type="password" class="form-control" required>
+  </div>
+  <button type="button" (click)="onSubmit(login.value, password.value)">Ouvrir le coffre à Photo</button>
+  <p *ngIf="error">Vos identifiants ne correspondent pas, <br> faites attention aux espaces dans le login</p>
+</form>
+<div *ngIf="open" style="padding-bottom: 100px">
+  <button type="button" (click)="close()">Fermer le coffre à Photo</button>
+  <app-private-dir [dir]="open" [deep]="0"></app-private-dir>
+</div>
+
+<div class="tarif">
+  <p>Tarifs :</p>
+    <li>11x15 = 3€</li>
+    <li>15x20 = 6€</li>
+    <li>24x30 = 14€</li>
+
+  <p>Chers visiteurs, n'hésitez pas à grouper vos commandes :</p>
+    <li>10 photos commandées = 9 + 1 offerte</li>
+    <li>15 photos commandées = 13 + 2 offertes</li>
+    <li>20 photos commandées = 17 + 3 offertes</li>
+
+  <p>Sélectionnez les numéros d'images qui vous intéressent avec les quantités et les formats, puis envoyez le tout à pierreduplouy@hotmail.com ou par sms au 0662221051</p>
+
+  <p>Il faut une semaine pour imprimer les photos. Vous pourrez ensuite venir les chercher au <a href="contact">Château de Boscherville</a></p>
+  <p>Ou communiquer votre adresse lors de la comande et ainsi bénéficier d'un envoi par collissimo</p>
+  <p>Frais de commande : <strong>6€40</strong> (colissimo ou mains propres)</p>
+  <p>Les photos seront disponible sur le site jusqu'en novembre 2018.</p>
+</div>

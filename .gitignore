@@ -4,6 +4,7 @@
 pierreduplouy.front/
 /tmp
 dist
+private
 
 # dependencies
 front/node_modules
